@@ -15,9 +15,9 @@ function drawBackground(background, context, sprites) {
 function loadMarioSprite() {
     return loadImage('/img/characters.gif')
     .then(image => {
-    console.log("image loaded")
+    console.log("image loaded", image)
     const sprites = new SpriteSheet(image, 16, 16);
-    sprites.define('idle',18, 3);
+    sprites.define('idle',21, 6);
     return sprites;
     });
 }
@@ -25,7 +25,7 @@ function loadMarioSprite() {
 function loadBackgroundSprites() {
     return loadImage('/img/tiles.png')
     .then(image => {
-    console.log("image loaded")
+    console.log("image loaded", image)
     const sprites = new SpriteSheet(image, 16, 16);
     sprites.define('ground', 0, 0);
     sprites.define('sky', 3, 23);
