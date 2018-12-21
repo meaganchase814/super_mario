@@ -1,6 +1,6 @@
-export default 
 
-class SpriteSheet {
+
+export default class SpriteSheet {
     constructor(image, width, height) {
         this.image = image;
         this.width = width;
