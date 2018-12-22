@@ -1,7 +1,7 @@
 import Compositor from './Compositor.js'
 import {loadLevel} from './loaders.js'; 
 import {loadMarioSprite, loadBackgroundSprites} from './sprites.js'
-import {createBackgroundLayer} from './layers.js'
+import createBackgroundLayer from './layers.js'
 
 
 const canvas = document.getElementById('screen');
@@ -23,7 +23,7 @@ Promise.all([
 .then(([marioSprite, backgroundSprites, level]) => {
     const comp = new Compositor();
 
-    const backgroundLayer = createBackgroundLayer(level.backgrounds, sprites);
+    const backgroundLayer = createBackgroundLayer(level.backgrounds, backgroundSprites);
     comp.layers.push(backgroundLayer);
 
    
